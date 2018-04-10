@@ -4,13 +4,13 @@
     define('angular-typeahead', ["angular"], function (a0) {
       return (factory(a0));
     });
-  } else if (typeof exports === 'object') {
+  } else if (typeof module === 'object' && module.exports) {
     // Node. Does not work with strict CommonJS, but
     // only CommonJS-like environments that support module.exports,
     // like Node.
     module.exports = factory(require("angular"),require("typeahead.js"));
   } else {
-    factory(angular);
+    factory(root["angular"]);
   }
 }(this, function (angular) {
 
